@@ -4,10 +4,26 @@
 	font-family: 'Bebas Neue', cursive;
 }
 
+body {
+	background: #f5dd40;
+}
+
+button {
+	background: red;
+	border: none;
+	padding: 12px 16px;
+	font-size: 16px;
+	cursor: pointer;
+	svg {
+		width: 18px;
+		height: 18px;
+	}
+}
+
 .flex {
 	margin-top: 90px;
 	flex-direction: column;
-	font-size: 30px;
+	font-size: 31px;
 	justify-content: center;
 
 	#pomodoro-name {
@@ -15,22 +31,71 @@
 		text-align: center;
 	}
 
-	.bcontrol {
+	.break-session {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		article {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 220px;
+
+			header {
+				flex: 0 1 100%;
+				text-align: center;
+			}
+
+			button,
+			div {
+				flex: 1 0 33.3%;
+				text-align: center;
+				height: 40px;
+			}
+		}
+
+		.bcontrol {
+			margin-right: 7px;
+		}
+
+		.scontrol {
+			margin-left: 7px;
+		}
 	}
 
 	.session-container {
-	}
-}
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 12px;
 
-button {
-	background: red;
-	border: none;
-	color: white;
-	padding: 12px 16px;
-	font-size: 16px;
-	cursor: pointer;
-	svg {
-		width: 50px;
-		height: 50px;
+		header {
+			flex: 0 1 100%;
+			text-align: center;
+			font-size: 35px;
+		}
+
+		div {
+			flex: 0 1 100%;
+			text-align: center;
+			font-size: 55px;
+		}
+
+		svg {
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+		}
+
+		#start_stop {
+			margin-right: 13px;
+		}
+
+		#reset {
+			margin-left: 13px;
+		}
 	}
 }

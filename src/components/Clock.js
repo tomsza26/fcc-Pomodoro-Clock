@@ -17,7 +17,7 @@ class Clock extends React.Component {
 
 	render() {
 		return (
-			<div class="flex">
+			<div className="flex">
 				<header id="pomodoro-name">pomodoro clock</header>
 				<section className="break-session">
 					<article className="bcontrol">
@@ -43,13 +43,9 @@ class Clock extends React.Component {
 				</section>
 				<section className="session-container">
 					<header id="timer-label">session</header>
-					<div id="time-left">{this.state.sessionT}</div>
-					<button id="start_stop">
-						<Play_pause />
-					</button>
-					<button id="reset">
-						<Reset />
-					</button>
+					<div id="time-left">{this.state.sessionT}:00</div>
+					<Play_pause />
+					<Reset />
 				</section>
 			</div>
 		);
